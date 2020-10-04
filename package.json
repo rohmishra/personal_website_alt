@@ -1,0 +1,31 @@
+{
+  "name": "rmishra.me",
+  "version": "2.0.0",
+  "description": "Second revision of my rmishra.me website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohmishra/rmishra.me.git"
+  },
+  "keywords": [
+    "website",
+    "personal",
+    "website",
+    "webpack",
+    "node",
+    "static"
+  ],
+  "author": "Rohan M.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rohmishra/rmishra.me/issues"
+  },
+  "homepage": "https://github.com/rohmishra/rmishra.me#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
