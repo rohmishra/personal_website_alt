@@ -104,9 +104,6 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
 
 ol,
 ul {
@@ -121,20 +118,74 @@ q:after {
     content: '';
     content: none;
 }
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro',
+    sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: IBM Plex Mono;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+p,li,cite {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+h2,strong {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 700;
+}
+h2 {
+    font-size: 36px;
+    line-height: 45px;
+}
+strong {
+    line-height: 23px;
+    font-size: 18px;
+}
+
+h3 {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 16px;
+    color: #000000;
+}
 
 body {
+    line-height: 1;
     background-color: #efefef;
     font-family: 'Source Sans Pro',
         sans-serif;
 }
 
 nav{
+    box-sizing: border-box;
     position: fixed;
     display: flex;
     width: 100%;
-    // background: rgba(220, 220, 220, 0.5);
+    background: rgba(40, 40, 40, 0.5);
     z-index: 999;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     min-height: 70px;
     max-height: 90px;
@@ -163,7 +214,7 @@ nav{
             line-height: 23px;
             text-align: right;
             position: relative;
-            transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            // transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
             &::after {
                 content: "";
@@ -198,10 +249,129 @@ header{
     height:75vh;
     background: #03122B;
 
+    main {
+        padding: 20% 10%;
+
+        h1 {
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            padding-bottom: 22px;
+            color: #EBEBE8;
+
+            em {
+                font-weight: 700;
+            }
+        }
+
+        a{
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            color: #8D97B5;
+        }
+
+        li{
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 16px;
+            a {
+                font-weight: 700;
+            }
+        }
+    }
 }
 
+aside {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 10%;
+
+    p {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+
+        a {
+            font-family: Source Sans Pro;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: right;
+            color: #000000;
+        }
+    }
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-width: 50%;
+    }
+}
+
+.card {
+    background: #FFFFFF;
+    border: 2px solid #1861BF;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 22px rgba(34, 34, 34, 0.25);
+    border-radius: 6px;
+    padding: 24px;
+    margin: 24px;
+}
+
+#repo_website {
+    background: #EBEBE8;
+}
+#resume {
+    background: #C4C4C4;
+}
+
+#about-me {
+    display: grid;
+
+    #my-info{
+        strong {
+            font-family: Source Sans Pro;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 45px;
+            em {
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+    }
+}
+    
 @media (max-width: 800px){
     header{
         height: 40vh;
+
+        main {
+            padding: 10% 5%;
+        }
+    }
+
+    section{
+        flex-direction: column;
     }
 }
