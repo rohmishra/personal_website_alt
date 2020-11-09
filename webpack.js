@@ -1,9 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// test if running for live
-const isDevelopment = process.env.NODE_ENV === 'development'
-
 module.exports = {
     mode: "production",
     entry: "./src/main.js",
