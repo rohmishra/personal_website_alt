@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,400;0,700;1,400&display=swap');
+
 html,
 body,
 div,
@@ -111,10 +113,6 @@ ul {
     list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none;
-}
 
 blockquote:before,
 blockquote:after,
@@ -124,7 +122,86 @@ q:after {
     content: none;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+body {
+    background-color: #efefef;
+    font-family: 'Source Sans Pro',
+        sans-serif;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    // background: rgba(220, 220, 220, 0.5);
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    max-height: 90px;
+    padding: 14px 48px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(30px);
+    transition: all 300ms ease-in-out;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #DDD;
+            margin: 0px 12px;
+            padding-bottom: 0.31rem;
+            outline: none;
+            font-family: 'Source Sans Pro',
+                sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: right;
+            position: relative;
+            transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+            &::after {
+                content: "";
+                background: #1861BF;
+                // mix-blend-mode: exclusion;
+                mix-blend-mode: overlay;
+                display: block;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                right: 0.2rem;
+                left: 0.2rem;
+                transition: all .3s cubic-bezier(.2, 0, 0, 1);
+                transform-origin: bottom center;
+                z-index: -1;
+            }
+            
+            &:hover{
+                transition-duration: .35s;
+                color: #fff;
+                &::after {
+                    height: calc(112%);
+                    right: -.5rem;
+                    left: -.5rem;
+                }
+            }
+        }
+    }
+}
+
+header{
+    height:75vh;
+    background: #03122B;
+
+}
+
+@media (max-width: 800px){
+    header{
+        height: 40vh;
+    }
 }
