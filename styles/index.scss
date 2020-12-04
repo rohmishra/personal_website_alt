@@ -250,7 +250,7 @@ header{
     background: #03122B;
 
     main {
-        padding: 20% 10%;
+        padding: 18% 10%;
 
         h1 {
             font-family: IBM Plex Mono;
@@ -327,6 +327,30 @@ section {
     }
 }
 
+footer {
+    background: #2F2FE9;
+    min-height: 100px;
+    padding: 32px 10%;
+
+    em{
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        color: #EEEEEE;
+    }
+    p {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 540px;
+        color: #EEEEEE;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}
+
 .card {
     background: #FFFFFF;
     border: 2px solid #1861BF;
@@ -335,6 +359,29 @@ section {
     border-radius: 6px;
     padding: 24px;
     margin: 24px;
+
+    img {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+
+    }
+    a {
+        font-family: Source Sans Pro;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #444444;
+    }
+    span {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        color: #444444;
+    }
 }
 
 #repo_website {
@@ -346,8 +393,25 @@ section {
 
 #about-me {
     display: grid;
-
+    padding: 10vh 10%;
+    grid-template-areas: 
+    "head head"
+    "my-info my-project"
+    "my-info my-project"
+    "my-info my-project"
+    "my-info my-techstk"
+    "my-inrec my-inrec"
+    "my-inrec my-inrec"
+    "my-inrec my-inrec"
+    ;
+    &>h2 {
+        color: #fff;
+        background: #000;
+        width: 30%;
+        grid-area: 'head'
+    }
     #my-info{
+        grid-area: my-info;
         strong {
             font-family: Source Sans Pro;
             font-style: italic;
@@ -360,6 +424,19 @@ section {
             }
         }
     }
+
+    #my-projects {
+        grid-area: my-project;
+    }
+
+    #my-tech-stack {
+        grid-area: my-techstk;
+    }
+
+    #my-in-rec {
+        grid-area: my-inrec;
+    }
+
 }
     
 @media (max-width: 800px){
