@@ -120,10 +120,11 @@ q:after {
     content: '';
     content: none;
 }
-*{
+
+* {
     box-sizing: border-box;
     font-family: 'Source Sans Pro',
-    sans-serif;
+        sans-serif;
 }
 
 a {
@@ -139,7 +140,9 @@ a {
     color: #000000;
 }
 
-p,li,cite {
+p,
+li,
+cite {
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 400;
@@ -149,15 +152,18 @@ p,li,cite {
     color: #000000;
 }
 
-h2,strong {
+h2,
+strong {
     font-family: Source Sans Pro;
     font-style: normal;
     font-weight: 700;
 }
+
 h2 {
     font-size: 36px;
     line-height: 45px;
 }
+
 strong {
     line-height: 23px;
     font-size: 18px;
@@ -180,7 +186,7 @@ body {
         sans-serif;
 }
 
-nav{
+nav {
     box-sizing: border-box;
     position: fixed;
     display: flex;
@@ -196,12 +202,12 @@ nav{
     -webkit-backdrop-filter: blur(30px);
     transition: all 300ms ease-in-out;
 
-    ul{
+    ul {
         display: flex;
         flex-direction: row;
         list-style: none;
 
-        a{
+        a {
             text-decoration: none;
             text-transform: uppercase;
             color: #DDD;
@@ -233,10 +239,11 @@ nav{
                 transform-origin: bottom center;
                 z-index: -1;
             }
-            
-            &:hover{
+
+            &:hover {
                 transition-duration: .35s;
                 color: #fff;
+
                 &::after {
                     height: calc(112%);
                     right: -.5rem;
@@ -247,8 +254,8 @@ nav{
     }
 }
 
-header{
-    height:75vh;
+header {
+    height: 75vh;
     background: #03122B;
 
     main {
@@ -268,7 +275,7 @@ header{
             }
         }
 
-        a{
+        a {
             font-family: IBM Plex Mono;
             font-style: normal;
             font-weight: 500;
@@ -278,12 +285,13 @@ header{
             color: #8D97B5;
         }
 
-        li{
+        li {
             margin-bottom: 8px;
         }
 
         p {
             margin-top: 16px;
+
             a {
                 font-weight: 700;
             }
@@ -334,13 +342,14 @@ footer {
     min-height: 100px;
     padding: 32px 10%;
 
-    em{
+    em {
         font-family: 'IBM Plex Mono', monospace;
         font-weight: 600;
         font-size: 14px;
         line-height: 14px;
         color: #EEEEEE;
     }
+
     p {
         font-family: 'IBM Plex Mono', monospace;
         font-weight: 400;
@@ -368,6 +377,7 @@ footer {
         width: 30px;
 
     }
+
     a {
         font-family: Source Sans Pro;
         font-style: italic;
@@ -376,6 +386,7 @@ footer {
         line-height: 18px;
         color: #444444;
     }
+
     span {
         font-family: Source Sans Pro;
         font-style: normal;
@@ -389,6 +400,7 @@ footer {
 #repo_website {
     background: #EBEBE8;
 }
+
 #resume {
     background: #C4C4C4;
 }
@@ -396,30 +408,34 @@ footer {
 #about-me {
     display: grid;
     padding: 10vh 10%;
-    grid-template-areas: 
-    "head head"
-    "my-info my-project"
-    "my-info my-project"
-    "my-info my-project"
-    "my-info my-techstk"
-    "my-inrec my-inrec"
-    "my-inrec my-inrec"
-    "my-inrec my-inrec"
+    grid-template-areas:
+        "head head"
+        "my-info my-project"
+        "my-info my-project"
+        "my-info my-project"
+        "my-info my-techstk"
+        "my-inrec my-inrec"
+        "my-inrec my-inrec"
+        "my-inrec my-inrec"
     ;
+
     &>h2 {
         color: #fff;
         background: #000;
         width: 30%;
         grid-area: 'head'
     }
-    #my-info{
+
+    #my-info {
         grid-area: my-info;
+
         strong {
             font-family: Source Sans Pro;
             font-style: italic;
             font-weight: 400;
             font-size: 36px;
             line-height: 45px;
+
             em {
                 font-style: normal;
                 font-weight: 700;
@@ -440,9 +456,21 @@ footer {
     }
 
 }
-    
-@media (max-width: 800px){
-    header{
+
+#contactme {
+    #social-media {
+        h3 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    header {
         height: 40vh;
 
         main {
@@ -450,7 +478,7 @@ footer {
         }
     }
 
-    section{
+    section {
         flex-direction: column;
     }
 }
