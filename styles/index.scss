@@ -445,10 +445,60 @@ footer {
 
     #my-projects {
         grid-area: my-project;
+        max-width: 40vw;
+
+        ul>li {
+            font-family: "IBM Plex Mono", monospace;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 16px;
+            color: #444444;
+
+            i {
+                font-family: IBM Plex Mono;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                display: block;
+                padding-top: 8px;
+            }
+        }
     }
 
     #my-tech-stack {
         grid-area: my-techstk;
+        display: inline-block;
+
+        &>h3 {
+            font-family: "Source Sans Pro", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            padding-top: 18px;
+        }
+
+        ul {
+            display: inline-flex;
+
+            li {
+                background: #444444;
+                border-radius: 4px;
+                padding: 4px 8px;
+                margin: 4px;
+                // text styling
+                font-family: IBM Plex Mono;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: #EDEDED;
+            }
+        }
     }
 
     #my-in-rec {
