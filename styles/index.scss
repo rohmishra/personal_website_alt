@@ -433,9 +433,16 @@ footer {
 
     #my-info {
         grid-area: my-info;
+        min-width: 32vw;
+
+        p {
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 18px;
+            line-height: 23px;
+        }
 
         strong {
-            font-family: Source Sans Pro;
+            font-family: "Source Sans Pro", sans-serif;
             font-style: italic;
             font-weight: 400;
             font-size: 36px;
@@ -524,7 +531,7 @@ footer {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     nav {
         justify-content: center;
     }
@@ -566,11 +573,20 @@ footer {
             width: 80%;
         }
 
+        #my-projects {
+            max-width: initial;
+
+        }
+
+        #my-info {
+            &>p {
+                margin: 12px 0;
+            }
+        }
 
         #my-tech-stack {
-
             ul {
-                display: block;
+                display: inline-block;
             }
         }
     }
