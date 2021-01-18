@@ -260,6 +260,8 @@ header {
     height: 60vh;
     background: #03122B;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     main {
         padding: 8% 10%;
@@ -523,15 +525,46 @@ footer {
 }
 
 @media (max-width: 800px) {
+    nav {
+        justify-content: center;
+    }
+
     header {
-        height: 40vh;
+        height: 55vh;
+        flex-direction: column;
+        justify-content: flex-end;
+
 
         main {
             padding: 10% 5%;
+            text-align: center;
         }
     }
 
     section {
         flex-direction: column;
+    }
+
+    #about-me {
+        grid-template-areas:
+            "head"
+            "my-info"
+            "my-info"
+            "my-info"
+            "my-info"
+            "my-project"
+            "my-project"
+            "my-inrec"
+            "my-inrec"
+            "my-inrec"
+            "my-inrec"
+            "my-techstk";
+
+        #my-tech-stack {
+
+            ul {
+                display: block;
+            }
+        }
     }
 }
