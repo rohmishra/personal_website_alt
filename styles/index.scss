@@ -428,7 +428,7 @@ footer {
         color: #fff;
         background: #000;
         width: 30%;
-        grid-area: 'head'
+        grid-area: head
     }
 
     #my-info {
@@ -543,6 +543,10 @@ footer {
 
     section {
         flex-direction: column;
+
+        &>div {
+            max-width: initial;
+        }
     }
 
     #about-me {
@@ -559,6 +563,11 @@ footer {
             "my-inrec"
             "my-inrec"
             "my-techstk";
+        width: 100vw;
+
+        &>h2 {
+            width: initial;
+        }
 
         #my-tech-stack {
 
