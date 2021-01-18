@@ -553,21 +553,19 @@ footer {
         grid-template-areas:
             "head"
             "my-info"
-            "my-info"
-            "my-info"
-            "my-info"
-            "my-project"
             "my-project"
             "my-inrec"
-            "my-inrec"
-            "my-inrec"
-            "my-inrec"
-            "my-techstk";
-        width: 100vw;
+            "my-techstk"
+        ;
+
+        &>* {
+            margin-bottom: 24px;
+        }
 
         &>h2 {
-            width: initial;
+            width: 80%;
         }
+
 
         #my-tech-stack {
 
