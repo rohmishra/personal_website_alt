@@ -1,0 +1,22 @@
+// Button
+button {
+    // Background
+    background: #EBEBE8;
+
+    // shape
+    border: 1px solid #8D97B5;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 12px 6px;
+
+    // Font
+    font-family: IBM Plex Mono;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #444444;
+
+    // positioning
+    display: inline;
+}

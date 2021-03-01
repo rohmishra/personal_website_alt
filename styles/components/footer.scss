@@ -1,0 +1,26 @@
+// Footer
+
+footer {
+    background: #2F2FE9;
+    min-height: 100px;
+    padding: 32px 10%;
+
+    em {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        color: #EEEEEE;
+    }
+
+    p {
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 540px;
+        color: #EEEEEE;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}
