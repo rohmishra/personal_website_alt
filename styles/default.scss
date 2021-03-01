@@ -197,12 +197,6 @@ h3 {
     color: #000000;
 }
 
-/// === Interactive Elements ===
-@import 'components/textbox';
-@import 'components/button';
-@import 'components/navigation';
-@import 'components/cards';
-@import 'components/footer';
 
 body {
     line-height: 1;
@@ -220,54 +214,15 @@ body {
         sans-serif;
 }
 
-header {
-    min-height: 450px;
-    height: 60vh;
-    background: #03122B;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/// === Interactive Elements ===
+@import 'components/textbox';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/cards';
+@import 'components/footer';
+@import 'components/header';
 
-    main {
-        padding: 8% 10%;
 
-        h1 {
-            font-family: IBM Plex Mono;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 31px;
-            padding-bottom: 22px;
-            color: #EBEBE8;
-
-            em {
-                font-weight: 700;
-            }
-        }
-
-        a {
-            font-family: IBM Plex Mono;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 23px;
-            text-align: center;
-            color: #8D97B5;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        p {
-            margin-top: 16px;
-
-            a {
-                font-weight: 700;
-            }
-        }
-    }
-}
 
 aside {
     height: 70px;
@@ -307,26 +262,13 @@ section {
     }
 }
 
-
-
-
+// Responsive Styling
+// Targets mobile and tablet UI.
 
 
 @media (max-width: 850px) {
     nav {
         justify-content: center;
-    }
-
-    header {
-        height: 55vh;
-        flex-direction: column;
-        justify-content: flex-end;
-
-
-        main {
-            padding: 20% 5%;
-            text-align: center;
-        }
     }
 
     section {

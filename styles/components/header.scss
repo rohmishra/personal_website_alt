@@ -1,0 +1,64 @@
+header {
+    min-height: 450px;
+    height: 60vh;
+    background: #03122B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    main {
+        padding: 8% 10%;
+
+        h1 {
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 31px;
+            padding-bottom: 22px;
+            color: #EBEBE8;
+
+            em {
+                font-weight: 700;
+            }
+        }
+
+        a {
+            font-family: IBM Plex Mono;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            color: #8D97B5;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 16px;
+
+            a {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// Responsive Styling
+
+@media (max-width: 850px) {
+    header {
+        height: 55vh;
+        flex-direction: column;
+        justify-content: flex-end;
+
+
+        main {
+            padding: 20% 5%;
+            text-align: center;
+        }
+    }
+}
