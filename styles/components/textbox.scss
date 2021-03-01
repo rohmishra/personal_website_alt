@@ -23,7 +23,7 @@ input[type=email] {
     color: #14142B;
 
     ::placeholder {
-        // Default
+        // Info Text
         color: #A0A3BD;
         font-weight: 400;
         opacity: 100%;
@@ -36,6 +36,7 @@ input[type=email] {
     border: none; // <== Get rid of default styling 
     margin: 4px;
     padding: 4px 10px;
+    border: 2px #000000 transparent;
 
     // Positioning
     display: block;
