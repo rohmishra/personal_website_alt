@@ -1,0 +1,147 @@
+#about-me {
+    display: grid;
+    padding: 10vh 10%;
+    grid-template-areas:
+        "head head"
+        "my-info my-project"
+        "my-info my-project"
+        "my-info my-project"
+        "my-info my-techstk"
+        "my-inrec my-inrec"
+        "my-inrec my-inrec"
+        "my-inrec my-inrec"
+    ;
+
+    &>h2 {
+        color: #fff;
+        background: #000;
+        width: 30%;
+        grid-area: head
+    }
+
+    #my-info {
+        grid-area: my-info;
+        min-width: 32vw;
+
+        p {
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 18px;
+            line-height: 23px;
+        }
+
+        strong {
+            font-family: "Source Sans Pro", sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 45px;
+
+            em {
+                font-style: normal;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #my-projects {
+        grid-area: my-project;
+        max-width: 40vw;
+
+        ul>li {
+            font-family: "IBM Plex Mono", 'Courier New', Courier, monospace;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 16px;
+            color: #444444;
+
+            i {
+                font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                display: block;
+                padding-top: 8px;
+            }
+        }
+    }
+
+    #my-tech-stack {
+        grid-area: my-techstk;
+        display: inline-block;
+
+        &>h3 {
+            font-family: "Source Sans Pro", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            padding-top: 18px;
+        }
+
+        ul {
+            display: inline;
+
+            li {
+                background: #444444;
+                border-radius: 4px;
+                padding: 4px 8px;
+                margin: 4px;
+                // text styling
+                font-family: IBM Plex Mono;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: #EDEDED;
+            }
+        }
+    }
+
+    #my-in-rec {
+        grid-area: my-inrec;
+    }
+
+}
+
+// Responsive Styling
+@media (max-width: 850px) {
+    #about-me {
+        grid-template-areas:
+            "head"
+            "my-info"
+            "my-project"
+            "my-inrec"
+            "my-techstk"
+        ;
+
+        &>* {
+            margin-bottom: 24px;
+        }
+
+        &>h2 {
+            width: 80%;
+        }
+
+        #my-projects {
+            max-width: initial;
+
+        }
+
+        #my-info {
+            &>p {
+                margin: 12px 0;
+            }
+        }
+
+        #my-tech-stack {
+
+            ul {
+                display: inline-block;
+            }
+        }
+    }
+}
