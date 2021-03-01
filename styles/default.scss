@@ -336,40 +336,4 @@ section {
             max-width: initial;
         }
     }
-
-    #about-me {
-        grid-template-areas:
-            "head"
-            "my-info"
-            "my-project"
-            "my-inrec"
-            "my-techstk"
-        ;
-
-        &>* {
-            margin-bottom: 24px;
-        }
-
-        &>h2 {
-            width: 80%;
-        }
-
-        #my-projects {
-            max-width: initial;
-
-        }
-
-        #my-info {
-            &>p {
-                margin: 12px 0;
-            }
-        }
-
-        #my-tech-stack {
-
-            ul {
-                display: inline-block;
-            }
-        }
-    }
 }

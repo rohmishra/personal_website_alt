@@ -1,4 +1,11 @@
-@import 'default';
+// ========================================
+// Styling for Home Page for rmishra.me 
+// website. generates `index.css` 
+//  
+// (C) 2021 Rohan Mishra.
+// ========================================
+
+@import 'default'; // Use default style for website.
 
 #repo_website {
     background: #EBEBE8;
@@ -153,6 +160,46 @@
             white-space: pre-line;
 
             color: #8D97B5;
+        }
+    }
+}
+
+// Responsive Styling
+
+@media (max-width: 850px) {
+    #about-me {
+        grid-template-areas:
+            "head"
+            "my-info"
+            "my-project"
+            "my-inrec"
+            "my-techstk"
+        ;
+
+        &>* {
+            margin-bottom: 24px;
+        }
+
+        &>h2 {
+            width: 80%;
+        }
+
+        #my-projects {
+            max-width: initial;
+
+        }
+
+        #my-info {
+            &>p {
+                margin: 12px 0;
+            }
+        }
+
+        #my-tech-stack {
+
+            ul {
+                display: inline-block;
+            }
         }
     }
 }
