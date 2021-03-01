@@ -241,38 +241,12 @@ aside {
     }
 }
 
-section {
-    display: flex;
-    justify-content: space-between;
-    padding: 10%;
-
-    &>div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        max-width: 50%;
-    }
-}
-
-/// === Interactive Elements ===
+/// === UI Components ===
 @import 'components/textbox';
 @import 'components/button';
-@import 'components/navigation';
 @import 'components/cards';
-@import 'components/footer';
+/// === Interactive Components ===
+@import 'components/navigation';
 @import 'components/header';
-
-// Responsive Styling
-// Targets mobile and tablet UI.
-
-
-@media (max-width: 850px) {
-
-    section {
-        flex-direction: column;
-
-        &>div {
-            max-width: initial;
-        }
-    }
-}
+@import 'components/sections';
+@import 'components/footer';

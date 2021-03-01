@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-width: 50%;
+    }
+}
+
+// Responsive Styling
+@media (max-width: 850px) {
+
+    section {
+        flex-direction: column;
+
+        &>div {
+            max-width: initial;
+        }
+    }
+}
