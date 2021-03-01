@@ -66,3 +66,9 @@ nav {
         }
     }
 }
+
+@media (max-width: 850px) {
+    nav {
+        justify-content: center;
+    }
+}
