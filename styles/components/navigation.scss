@@ -1,18 +1,26 @@
-// *** NAVIGATION ***
+// ========================================
+// NAVIGATION
+// 
+// (C) 2021 Rohan Mishra.
+// ========================================
+
 nav {
+    // Background
+    background: #03122BA0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(30px);
+    // Shape
+    min-height: 70px;
+    max-height: 90px;
+    width: 100%;
+    padding: 14px 48px;
+    // Positioning
     box-sizing: border-box;
     position: fixed;
     display: flex;
-    width: 100%;
-    background: #03122BA0;
     z-index: 999;
-    justify-content: flex-end;
     align-items: center;
-    min-height: 70px;
-    max-height: 90px;
-    padding: 14px 48px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(30px);
+    justify-content: flex-end;
     transition: all 300ms ease-in-out;
 
     ul {
@@ -53,6 +61,7 @@ nav {
                 z-index: -1;
             }
 
+            // State UI
             &:hover {
                 transition-duration: .35s;
                 color: #fff;
@@ -67,6 +76,7 @@ nav {
     }
 }
 
+// Responsive design
 @media (max-width: 850px) {
     nav {
         justify-content: center;

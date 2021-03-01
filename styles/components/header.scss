@@ -1,7 +1,16 @@
+// ========================================
+// Default header layout
+// 
+// (C) 2021 Rohan Mishra.
+// ========================================
+
 header {
+    // Background
+    background: #03122B;
+    // Shape
     min-height: 450px;
     height: 60vh;
-    background: #03122B;
+    // Positioning
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +57,6 @@ header {
 }
 
 // Responsive Styling
-
 @media (max-width: 850px) {
     header {
         height: 55vh;
