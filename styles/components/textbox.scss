@@ -5,23 +5,32 @@ input[type=email] {
     // Background
     background: #EBEBE8; //#DADADA;
 
-    &:active,
-    &:focus {
-        background-color: #FCFCFC;
-        border: 2px #000000 solid;
-    }
 
     // Font
     font-family: "IBM Plex Mono",
-    'Courier New',
-    Courier,
-    monospace;
+        'Courier New',
+        Courier,
+        monospace;
     font-style: italic;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     color: #14142B;
 
+
+    // Shape
+    width: 342px;
+    height: 37px;
+    margin: 4px;
+    padding: 4px 10px;
+    // Border Styling
+    border-radius: 10px;
+    border: 2px #EBEBE8 solid;
+
+    // Positioning
+    display: block;
+
+    // Placeholder Text Styling
     ::placeholder {
         // Info Text
         color: #A0A3BD;
@@ -29,15 +38,12 @@ input[type=email] {
         opacity: 100%;
     }
 
-    // Shape
-    width: 342px;
-    height: 37px;
-    border-radius: 12px;
-    border: none; // <== Get rid of default styling 
-    margin: 4px;
-    padding: 4px 10px;
-    border: 2px #000000 transparent;
+    // States styling
+    &:active,
+    &:focus {
+        // Background
+        background-color: #FCFCFC;
+        border: 2px #000000 solid;
+    }
 
-    // Positioning
-    display: block;
 }
