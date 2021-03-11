@@ -106,3 +106,6 @@ dist
 # css.map and css files
 *.css.map
 *.css
+
+# sass cache
+.sass-cache
