@@ -1,0 +1,35 @@
+#my-in-rec {
+    &>div {
+        display: grid;
+        grid-template-columns: 100% 100%;
+        grid-template-rows: auto 8% auto 30% 5% 25%;
+
+        // First child 1,1
+        &>:nth-child(1) {
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+
+        // Second Child 1,2
+        &>:nth-child(2) {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        // Third Child 2,1
+        &>:nth-child(3) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 5;
+            grid-row-end: 7;
+        }
+
+        // Fourth Child 2,2
+        &>:nth-child(4) {
+            grid-row-start: 3;
+            grid-row-end: 7;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    }
+}
