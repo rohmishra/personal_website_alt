@@ -1,25 +1,26 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-# name: Deploy to build-staging
+name: Deploy to build-staging
 
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  push:
+    branches: [main, workflow-test]
+  pull_request:
+    branches: [main, workflow-test]
 
-# jobs:
-#   build-staging:
+jobs:
+  create-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ./build/buildscript.sh
 
-#     runs-on: ubuntu-latest
-
-#     steps:
-
-#       - name: Deploy to GCP Storage Bucket
-#         uses: google-github-actions/upload-cloud-storage@v0.2.0
-#         with:
-#           credentials:  ${{secrets.gcp_service_key}}
-#           path:  ${{secrets.export_bundle_path}}
-#           destination:  ${{secrets.gcp_bucket_name}}
-
+  build-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GCP Storage Bucket
+        uses: google-github-actions/upload-cloud-storage@v0.2.0
+        with:
+          credentials: ${{secrets.gcp_service_key}}
+          path: ./build/output/
+          destination: ${{secrets.gcp_bucket_name}}
