@@ -40,4 +40,17 @@
             color: #8D97B5;
         }
     }
+
+    #mail-link {
+        h4 {
+            // <== "Lets Chat"
+            font-family: "IBM Plex Mono", 'Courier New', Courier, monospace;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            margin: 4px;
+            color: #444444;
+        }
+    }
 }
