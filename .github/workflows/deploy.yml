@@ -26,13 +26,9 @@ jobs:
           destination: |
             build/output/styles/default.css
             build/output/styles/index.css
-      - name: Deploy to GCP Storage Bucket
+      - name: Deploy styles to GCP Storage Bucket
         uses: google-github-actions/upload-cloud-storage@v0.2.0
         with:
           credentials: ${{secrets.gcp_service_key}}
-          path: |
-            ./img
-            ./favicon.ico
-            ./index.html
-            ./build/output/styles
+          path: ./build/output/styles
           destination: ${{secrets.gcp_bucket_name}}
