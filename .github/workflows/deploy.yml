@@ -22,7 +22,7 @@ jobs:
         with:
           source: |
             styles/default.scss
-            styles/global.scss
+            styles/index.scss
           destination: |
             ./build/output/styles/default.css
             ./build/output/styles/index.css
