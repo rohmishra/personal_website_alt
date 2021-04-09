@@ -30,5 +30,8 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v0.2.0
         with:
           credentials: ${{secrets.gcp_service_key}}
-          path: ./build/output/
+          path: ./img
+            ./favicon.ico
+            ./index.html
+            ./build/output/styles
           destination: ${{secrets.gcp_bucket_name}}
