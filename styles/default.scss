@@ -16,6 +16,12 @@
 @import 'components/strip'; // <-- strip infobar
 @import 'components/footer'; //<-- import footer
 
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #efefef;
 }
