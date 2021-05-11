@@ -28,6 +28,12 @@ jobs:
           credentials: ${{secrets.gcp_service_key}}
           path: ./build/output/styles
           destination: ${{secrets.gcp_bucket_name}}
+      - name: Deploy images to GCP Storage Bucket
+        uses: google-github-actions/upload-cloud-storage@v0.2.0
+        with:
+          credentials: ${{secrets.gcp_service_key}}
+          path: ./img
+          destination: ${{secrets.gcp_bucket_name}}
       - name: Deploy Homepage HTML to GCP Storage Bucket
         uses: google-github-actions/upload-cloud-storage@v0.2.0
         with:
