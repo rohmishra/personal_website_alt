@@ -19,10 +19,8 @@ jobs:
         uses: gha-utilities/sass-build@v0.3.7
         with:
           source: |
-            styles/default.scss
             styles/index.scss
           destination: |
-            build/output/styles/default.css
             build/output/styles/index.css
       - name: Deploy styles to GCP Storage Bucket
         uses: google-github-actions/upload-cloud-storage@v0.2.0
@@ -34,5 +32,5 @@ jobs:
         uses: google-github-actions/upload-cloud-storage@v0.2.0
         with:
           credentials: ${{secrets.gcp_service_key}}
-          path: ./build/output/index.html
+          path: ./index.html
           destination: ${{secrets.gcp_bucket_name}}
