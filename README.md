@@ -1,3 +1,5 @@
+[Deprecated] Im returning back to my old design with some changes as i couldnt make this design work on mobile without major changes which looses coherence with desktop design.
+
 # rmishra.me
 
 *Code repository for my new (and hopefully improved) rmishra.me website*
